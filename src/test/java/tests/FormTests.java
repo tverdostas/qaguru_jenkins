@@ -8,7 +8,7 @@ import org.junit.jupiter.api.Test;
 import pages.RegistrationPage;
 
 import static com.codeborne.selenide.logevents.SelenideLogger.step;
-
+@Tag("web")
 public class FormTests extends TestBase {
 
     RegistrationPage registrationPage = new RegistrationPage();
