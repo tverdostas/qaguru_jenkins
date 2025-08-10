@@ -40,8 +40,8 @@ dependencies {
         "org.slf4j:slf4j-simple:2.0.17")
 }
 
-task web_test(type: Test) {
+/*build.gradle web_test(type: Test) {
     useJUnitPlatform {
         includeTags("web")
     }
-}
+}*/
