@@ -41,7 +41,9 @@ dependencies {
         "org.slf4j:slf4j-simple:2.0.17")
 }
 
-/*tasks.withType(Test) {
+tasks.withType(Test) {
+    systemProperties(System.getProperties())
+
     useJUnitPlatform()
 
     testLogging {
@@ -52,12 +54,11 @@ dependencies {
     }
 }
 
-
 task web_test(type: Test) {
     useJUnitPlatform {
         includeTags("web")
     }
-}*/
+}
 
 test {
     useJUnitPlatform()
