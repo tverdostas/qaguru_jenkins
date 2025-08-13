@@ -28,7 +28,6 @@ allure {
     }
 }
 
-
 dependencies {
     testImplementation (
             "com.codeborne:selenide:$selenideVersion",
