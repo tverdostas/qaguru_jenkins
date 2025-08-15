@@ -16,14 +16,14 @@ import static com.codeborne.selenide.Selenide.closeWebDriver;
 public class TestBase {
     @BeforeAll
     static void browserConfigurations(){
-/*        Configuration.browserSize = System.getProperty("resolution", "1980x1080");
+        Configuration.browserSize = System.getProperty("resolution", "1980x1080");
         Configuration.browser = System.getProperty("browser", "chrome");
-        Configuration.browserVersion = System.getProperty("version", "128.0");*/
+        Configuration.browserVersion = System.getProperty("version", "128.0");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        Configuration.browserSize = "1920x1080";
-        //Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_url") + "/wd/hub";
-        Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
+        // Configuration.browserSize = "1920x1080";
+        Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_url") + "/wd/hub";
+        // Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
         DesiredCapabilities capabilities = new DesiredCapabilities();
         capabilities.setCapability("selenoid:options", Map.<String, Object>of(
