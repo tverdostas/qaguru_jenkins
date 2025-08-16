@@ -7,6 +7,7 @@ import helpers.Attach;
 import io.qameta.allure.selenide.AllureSelenide;
 import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.BeforeAll;
+import org.junit.jupiter.api.BeforeEach;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 import java.util.Map;
@@ -21,7 +22,6 @@ public class TestBase {
         Configuration.browserVersion = System.getProperty("version", "128.0");
         Configuration.baseUrl = "https://demoqa.com";
         Configuration.pageLoadStrategy = "eager";
-        // Configuration.browserSize = "1920x1080";
         Configuration.remote = "https://user1:1234@" + System.getProperty("selenoid_url") + "/wd/hub";
         // Configuration.remote = "https://user1:1234@selenoid.autotests.cloud/wd/hub";
 
@@ -31,7 +31,10 @@ public class TestBase {
                 "enableVideo", true
         ));
         Configuration.browserCapabilities = capabilities;
+    }
 
+    @BeforeEach
+    void allureListener(){
         SelenideLogger.addListener("AllureSelenide", new AllureSelenide());
     }
 

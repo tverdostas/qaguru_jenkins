@@ -13,6 +13,7 @@ public class FormTests extends TestBase {
     RegistrationPage registrationPage = new RegistrationPage();
 
     @Test
+    @Tag("web")
     void registrationFormAllFieldsTest() {
         SelenideLogger.addListener("allure", new AllureSelenide());
         TestData testData = new TestData();
@@ -51,6 +52,7 @@ public class FormTests extends TestBase {
 
 
     @Test
+    @Tag("web")
     void registrationFormMinFieldsTest(){
         TestData testData = new TestData();
         step("Заполнить обязательные поля формы регистрации", () -> {
@@ -75,6 +77,7 @@ public class FormTests extends TestBase {
         }
 
     @Test
+    @Tag("web")
     void registrationFormNegativeTest(){
         TestData testData = new TestData();
         step("Заполнить несколько полей формы регистрации", () -> {
